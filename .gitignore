@@ -1,0 +1,7 @@
+# Artefactos pesados: ISO, chroot, squashfs
+build/*
+!build/enter-chroot.sh
+!build/exit-chroot.sh
+!build/rebuild-iso.sh
+!build/tools/
+build/tools/__pycache__/
