@@ -22,6 +22,9 @@ Se construye con `debootstrap` y se entrega como ISO Live con instalador Calamar
 
 ## Construcción (resumen)
 
+Las fases 2 requieren definir la contraseña inicial de `dev`/`root` por entorno
+(no se versiona ninguna): `export DEV_PASSWORD='...'`.
+
 ```sh
 sudo debootstrap --arch=amd64 --variant=minbase trixie build/chroot http://deb.debian.org/debian
 build/enter-chroot.sh   # copiar scripts/ a /root del chroot y ejecutarlos en orden de fase

@@ -124,10 +124,10 @@ Pendiente de optimizar: firefox-esr (300M), kernel/modules, libllvm (mesa), serv
   sin quitarlo. Módulos del kernel (107M) tampoco se tocaron (riesgo de hardware no soportado).
 - ISO final: 893M.
 
-### Fase 9 — Plymouth, instalador Calamares, sin gcc ✅ (con pruebas pendientes)
+### Fase 9 — Plymouth, instalador Calamares ✅ (con pruebas pendientes)
 - `phase9-installer.sh`: calamares + calamares-settings-debian, plymouth(+themes), grub-efi-amd64-bin,
   grub-pc-bin, efibootmgr, parted, dosfstools, rsync, squashfs-tools, os-prober, cryptsetup.
-  Purgados build-essential/gcc/g++ (make se conserva; gcc se reinstala con apt cuando haga falta).
+  Purgados build-essential/gcc/g++ (make se conserva). Nota: no queda "sin gcc": gdm3 arrastra cpp/gcc-14 por dependencias (ver Fase 13).
 - Plymouth: theme propio `aptitudeops` (copia de spinner, `/usr/share/plymouth/themes/aptitudeops`).
   OJO: el hook de initramfs de Debian pisa watermark.png con
   `/usr/share/desktop-base/debian-logos/logo-text-version-64.png` -> se reemplazó ESE archivo por
