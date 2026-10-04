@@ -1,6 +1,6 @@
 # AptitudeOPS — Progreso de construcción
 
-Última actualización: 2026-10-01 (Fase 13: EFI probado, ISO versionada 1.0; solo queda probar en VirtualBox/hardware real)
+Última actualización: 2026-10-04 (Fase 13: EFI probado, ISO versionada 1.0; probada en VirtualBox; solo queda hardware real)
 
 ## Objetivo
 Nombre de la distro: **AptitudeOPS** (renombrada el 2026-09-30; branding aplicado en
@@ -203,6 +203,7 @@ Instalación sin parches manuales -> arranque del disco instalado:
 Las VMs de prueba usan un usuario `tester` con credenciales descartables (no versionadas).
 Herramientas QEMU en `build/tools/` (keys/qclick/shot/type; los sockets AF_UNIX tienen límite de ~107
 caracteres de ruta: usar un symlink corto tipo `/tmp/q` y copiar los .py ahí).
-1. **Probar en VirtualBox real y en hardware** (no hay VirtualBox en este host; no se pudo hacer).
-   No se incluyó firmware no-libre extra (wifi/GPU) — evaluar `firmware-linux-nonfree` según el hardware.
+1. ✅ **VirtualBox:** probado por el usuario el 2026-10-04, funciona bien.
+   **Pendiente: probar en hardware real.** No se incluyó firmware no-libre extra (wifi/GPU) — evaluar
+   `firmware-linux-nonfree` según el hardware.
 2. Opcional: más peso (quitar paquetes GNOME no usados, `-Xdict-size`), Secure Boot (shim-signed).
